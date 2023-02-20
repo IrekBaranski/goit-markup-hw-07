@@ -22,7 +22,15 @@
     <!-- ----- ------------------------------------------------>
     <!-- ----- Section - PAGE HEADER - MENU -----                      -->
     <!-- ----- same on both sites ------------------------------------------->  
-    <header class="page-header container">
+    <!-- ----- (BEM) default: section, container 
+        ustawienie defaultowe:
+        1) HEADER jest jeden wspólny dla każdej podstrony -> część wspólna to HEADER. 
+        2) HEADER jest wyjątkowym SECTION: indywidualny padding, => modyfikujemy cechy SECTION: padding, background-color, border-bottom> section--
+
+    
+    
+    -->
+    <header class="page-header-section container">
         <div class="menu">
             
             <div class="menu__logo logo">
@@ -97,7 +105,7 @@
         <header class="section__order">
             <div class="container">
                 <div class="order__grid">
-                    <h1 class="order__slogan">EFEKTYWNE ROZWIĄZANIA <br> DLA WASZEGO BIZNESU </h1>
+                    <h1 class="order__ logan">EFEKTYWNE ROZWIĄZANIA <br> DLA WASZEGO BIZNESU </h1>
                 
                 <!-- modal (js)  -->
 

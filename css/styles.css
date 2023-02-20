@@ -4,10 +4,43 @@
 /* ----- ------------------------------ ----- */
 
 :root {
-    /*content colors*/
+    /*color palette /
+    - default: 
+    --black: (0, 0, 0);
+    --white: (255, 255, 255);
+    /*color palette WebStudio-blue 
+    (palette-black, palette-grey, blue, white
+    --palette-black: (33, 33, 33,1);
+    --palette-
+    --palette-dark-grey: ;
+    */
+    /*palette default; */
+    --default-c-black: black;
+    --default-c-white: white;
+    --default-c-grey: rgb(128, 128, 128);
+    --default-c-red: rgb(255, 0, 0);
+    
+
+    /*pallet brand-blue */
+    --theme-c-1st-black: rgb(33, 33, 33);
+    --theme-c-2nd-black: rgb(47, 48, 58);
+    --theme-c-1st-white: ;
+    --theme-c-2st-white: ;
+
+
+
+
+
+    /*page colors
+    --1st-main-color: var(--palet
+    --2nd-main-color:
+    --3rd-main-color: */
+
+    
     --main-color-black : rgb(33, 33, 33,1);
+ 
     --second-color-dark-grey: rgb(117, 117, 117);
-    --second-color-dark-grey-05: rgba(117, 117, 117, 0.5);
+    --second-color-dark-grey-05: rgba(117, 117, 117, 0.5); /*a moze opacity 0.5*/
     --main-color-on-dark-bg-white: rgba(255, 255, 255, 1);
     --second-color-dark-bg-white-06a: rgba(255, 255, 255, 0.6);
     --second-color-on-dark-bg-white-a03: rgba(255, 255, 255, 0.3);
@@ -37,7 +70,6 @@
     margin: 0px;
     padding: 0px;
 }
-
 body {
     font-family: 'Roboto', sans-serif;
     color: var(--main-color-black);   
@@ -45,7 +77,7 @@ body {
 }
 
 /* ----- ------------------------------ ----- */
-/* ----- tags- reset properties: ul, h  ----- */
+/* ----- html tags reset - properties: ul, h  ----- */
 ul,
 li {
     margin-block: 0px;
@@ -65,7 +97,8 @@ p {
 .section {
     padding-top: 94px;
     padding-bottom: 94px;
-}
+    background-color: var(--1st-main-bg-color);
+} 
 .section__header {
     font-size: 36px;
     font-weight: 700;
@@ -75,7 +108,7 @@ p {
     padding-bottom: 50px;
     /*background-color: aquamarine;*/
 }
-
+/* >>> ZMIENIĆ   na .list - każda lista traci stylowanie  */
 .section__list {
     list-style-type: none;
 }
@@ -92,8 +125,6 @@ p {
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
-
-
 .link:hover,
 .link:active,
 .link:focus {color: var(--brand-color-blue);
@@ -108,7 +139,7 @@ p {
     justify-content: center;
 
     background-color: var(--main-bg-color-white);
-
+    /* default: border: none; shadow: */
 }
 
 
@@ -127,6 +158,8 @@ p {
     line-height: 1.17;
     letter-spacing: 0.03em;
 }
+/* >>>> ZMIENIĆ 
+zmiana modyfikatorów koloru na wskazujące modyfikowany kolor a nie zastosowanie*/
 .logo__logotype--brand-color {color: var(--brand-color-blue);}
 .logo__logotype--on-light-bg {color: var(--logotype-on-light-bg-black);}
 .logo__logotype--on-dark-bg {color: var(--logotype-on-dark-bg-white);}
@@ -134,14 +167,29 @@ p {
 
 /* ----- ------------------------------ ----- */
 /* ----- ----- PAGE HEADER - MENU ----- ----- */
-/* ----- ------------------------------ ----- */
+/* ----- zostaje ta nazwa ponieważ później używamy nazwy header, page-header jest specyficzny dla tej strony. ALE rozbijamy na ele strukturalne section ------------------------------ ----- */
 
-.page-header {
+.page-header-section {
+    padding: 0;
     background-color:var(--main-bg-color-white);
     border-bottom: 1px solid var(--border-color-white2);
 }
+
+/*menu => składa się z cześci: 
+ ->layout grid określa: strukturę i położenie elelmentów (na siatce), => przeejmuje te rzeczy od menu (które nic nie mówi) 
+ ->.l-grid{} - ułożenie elelementów przez symetryczną siatkę flex  
+ -> .menu - component 
+*/
+.l-grid{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.c-menu{
+    
+}
 .menu {
-    height: 79px;
+     
     padding-left: 15px;
     padding-right: 15px;
 
@@ -158,10 +206,6 @@ p {
 .menu__logo {
     margin-right: 90px;  
 }
-
-/* ----- -------------------------------------------- */
-/* ----- 2nd menu item - navigation ----- */
-
 .menu__nav {
     display: flex;
     flex: 1;
