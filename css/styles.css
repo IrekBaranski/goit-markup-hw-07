@@ -54,8 +54,8 @@
     --brand-color-blue: rgb(33, 150, 243);
     --brand-color-blue-a09: rgba(33, 150, 243, 0.9);
     
-    --logotype-on-light-bg-black: rgb(0, 0, 0);
-    --logotype-on-dark-bg-white: rgb(255, 255, 255);
+    --logotype-dark-theme: rgb(0, 0, 0);
+    --logotype-light-theme: rgb(255, 255, 255);
     
     /*background & shadow colors*/
     --main-bg-color-white: rgb(255, 255, 255);
@@ -93,7 +93,8 @@ p {
     margin: 0px;
 }
 
-/* ----- (BEM) Global block - section ----- */
+/* ----- (BEM) Global default blocks  ----- */
+
 .section {
     padding-top: 94px;
     padding-bottom: 94px;
@@ -116,6 +117,13 @@ p {
     width: 1200px;
     margin-right: auto;
     margin-left: auto;
+}
+.l-grid{
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    align-content: center;
+    align-items: center;   
 }
 .link {
     text-decoration: none;
@@ -158,13 +166,14 @@ p {
     line-height: 1.17;
     letter-spacing: 0.03em;
 }
-/* >>>> ZMIENIĆ 
-zmiana modyfikatorów koloru na wskazujące modyfikowany kolor a nie zastosowanie*/
+
 .logo__logotype--brand-color {color: var(--brand-color-blue);}
-.logo__logotype--on-light-bg {color: var(--logotype-on-light-bg-black);}
-.logo__logotype--on-dark-bg {color: var(--logotype-on-dark-bg-white);}
+.logo__logotype--dark-theme {color: var(--logotype-dark-theme);}
+.logo__logotype--light-theme {color: var(--logotype-light-theme);}
 
 
+/* ----- ------------------------------ ----- */
+/* ----- ----- Specific styles ----- ----- */
 /* ----- ------------------------------ ----- */
 /* ----- ----- PAGE HEADER - MENU ----- ----- */
 /* ----- zostaje ta nazwa ponieważ później używamy nazwy header, page-header jest specyficzny dla tej strony. ALE rozbijamy na ele strukturalne section ------------------------------ ----- */
@@ -174,57 +183,37 @@ zmiana modyfikatorów koloru na wskazujące modyfikowany kolor a nie zastosowani
     background-color:var(--main-bg-color-white);
     border-bottom: 1px solid var(--border-color-white2);
 }
-
-/*menu => składa się z cześci: 
- ->layout grid określa: strukturę i położenie elelmentów (na siatce), => przeejmuje te rzeczy od menu (które nic nie mówi) 
- ->.l-grid{} - ułożenie elelementów przez symetryczną siatkę flex  
- -> .menu - component 
-*/
-.l-grid{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.c-menu{
-    
-}
-.menu {
-     
+.l-grid__page-header{
+    height: 80px;
     padding-left: 15px;
     padding-right: 15px;
-
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    
-    font-size: 14px;
-    font-weight: 500;
-    line-height: calc(16 / 14);
-    letter-spacing: 0.02em;
 }
 
-.menu__logo {
+.page-header__logo {
     margin-right: 90px;  
 }
-.menu__nav {
-    display: flex;
-    flex: 1;
 
+.nav {
+    display: flex;
+    flex: 1;  
+}
+.nav__text{
     font-size: 14px;
     font-weight: 500;
     line-height: calc(16 / 14);
     letter-spacing: 0.02em;
-   
+    color: var(--main-color-black)
 }
-.menu__nav-items {
+.nav__display{
     display: flex;   
     gap: 40px;
-    
+}
+.nav__list {
     list-style-type: none;
     color: var(--main-color-black); 
 }
 
-.menu__nav-link {
+.nav__link {
     color: var(--main-color-black); 
     margin: 0px 3px;
 }
@@ -267,20 +256,33 @@ zmiana modyfikatorów koloru na wskazujące modyfikowany kolor a nie zastosowani
 
 
 /* ----- -------------------------------------------- */
-/* ----- 3rd menu item - contact link ----- ----- */
+/* ----- 3rd page header item - contact link ----- ----- */
 
-.menu__contact {
+/*
+.l-grid{
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    align-content: center;
+    align-items: center;   
+}
+
+*/
+
+.contact {
     display: flex;
     padding: 0px 10px;  
 }
-.menu__contact-items {
+.contact__display {
     display: flex;
-    justify-content: center;   
-    gap: 30px; 
-
+    justify-content: center;
+    gap: 30px;  
+}
+.contact__list{
     list-style-type: none;
 }
-.menu__contact-item {
+
+.contact__item {
     display: inline-flex;
     justify-content: center;
     
@@ -294,17 +296,23 @@ zmiana modyfikatorów koloru na wskazujące modyfikowany kolor a nie zastosowani
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     transition-delay: 0;
 }
-.menu__contact-icon-mail {
+.contact__text{
+    font-size: 14px;
+    font-weight: 500;
+    line-height: calc(16 / 14);
+    letter-spacing: 0.02em;
+}
+.contact__icon-mail {
     display: inline-block;
     width: 16px;
     height: 16px;
     margin-right: 10px;
 
-    fill: inherit; 
+    fill: inherit   ; 
     /*var(--second-color-dark-grey);*/
 }
-.menu__contact-icon-tel {
-     display: inline-block;
+.contact__icon-tel {
+    display: inline-block;
     width: 16px;
     height: 16px;
     margin-right: 7px;
@@ -312,18 +320,18 @@ zmiana modyfikatorów koloru na wskazujące modyfikowany kolor a nie zastosowani
     fill: inherit;
     /*var(--second-color-dark-grey);*/
 }
-.menu__contact-item:hover,
-.menu__contact-item:focus,
-.menu__contact-icon-mail:hover,
-.menu__contact-icon-mail:focus,
-.menu__contact-icon-tel:hover,
-.menu__contact-icon-tel:focus {
+.contact__item:hover,
+.contact__item:focus,
+.contact__icon-mail:hover,
+.contact__icon-mail:focus,
+.contact__icon-tel:hover,
+.contact__icon-tel:focus {
     color: var(--brand-color-blue);
     fill:var(--brand-color-blue);
 }
 
 /* ----- ------------------------------ ----- */
-/* ----- footer styles: dark background ----- */
+/* ----- Section footer styles: dark background, theme light, ----- */
 /* ----- ------------------------------ ----- */
 
 .section__footer {
@@ -331,6 +339,17 @@ zmiana modyfikatorów koloru na wskazujące modyfikowany kolor a nie zastosowani
     padding-bottom: 60px;
     
     background-color: var(--dark-bg-color-black1);
+}
+/*.grid{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}*/
+.grid--flex-start{
+    align-content: flex-start;
+}
+.grid__footer{
+
 }
 .footer__grid {
     display: flex;
