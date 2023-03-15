@@ -14,48 +14,43 @@
   <body>
 
     <!-- ----- ------------------------------------------------>
-    <!-- ----- Section - PAGE HEADER - MENU -----                      -->
+    <!-- ----- Section - PAGE HEADER -----                   -->
     <!-- ----- same as menu ------------------------------------------->
-    <!-- --> 
-    <header class="page-header container">
-        <div class="menu">
-            
-            <div class="logo menu__logo">
+    <header class="page-header-section container">
+        <div class="l-grid l-grid__page-header">
+
+            <!-- ----- ------------------------------------------------>
+            <!-- 1st menu item - logo -->        
+            <div class="logo page-header__logo">
                 <a class="logo__logotype link" href="./index.html" >
-                    <span class="logo__logotype logo__logotype--brand-color">Web</span>
-                    <span class="logo__logotype logo__logotype--on-light-bg">Studio</span>
+                    <span class="logo__logotype logo__logotype--brand-color">Web</span> 
+                    <span class="logo__logotype logo__logotype--dark-theme">Studio</span>
                 </a>
             </div>
     
-    <!-- ----- ------------------------------------------------>
-        <!-- 2nd menu item - navigation -->
-            <!-- ------------------------------------>
-            <nav class="menu__nav">
-                <ul class="menu__nav-items">
-                    <li>
-                        <a class="link menu__nav-link" href="./index.html">Agencja</a>
+            <!-- ----- ------------------------------------------------>
+            <!-- 2nd menu item - navigation -->
+            <nav class="nav nav__text">
+                <ul class="nav__display nav__list ">
+                    <li class="nav__item">
+                        <a class="link nav__link" href="./index.html">Agencja</a>
                     </li>
-                    <li>
-                        <a class="link menu__nav-link link--active" href="./portfolio.html">Portfolio</a>
+                    <li class="nav__item">
+                        <a class="link nav__link link--active" href="./portfolio.html">Portfolio</a>
                     </li>
-                    <li>
-                        <a class="link menu__nav-link" href="#/">Kontakt</a>
+                    <li class="nav__item">
+                        <a class="link nav__link" href="#/">Kontakt</a>
                     </li>
                 </ul>
             </nav>
     
-    <!-- ----- ------------------------------------------------>
-        <!-- 3rd menu item - contact links -->
-            <!-- ------------------------------------>
-
-            <div class="menu__contact">
-                    <ul class="menu__contact-items">
+            <!-- ----- ------------------------------------------------>
+            <!-- 3rd page-header item - contact links -->
+            <div class="contact contact__text">
+                    <ul class="contact__display contact__list">
                         <li>
-                            <a class="menu__contact-item link" 
-                            href="mailto:info@devstudio.com">
-                                <svg class="menu__contact-icon-mail " 
-                                width="16" 
-                                height="12">
+                            <a class="contact__item link" href="mailto:info@devstudio.com">
+                                <svg class="contact__icon-mail" width="16" height="12">
                                     <use href="./images/icons.svg#icon-envelope">
                                     </use>
                                 </svg>
@@ -64,8 +59,8 @@
                         </li>
 
                         <li>
-                            <a class="menu__contact-item link" href="tel:+48111111111">
-                                <svg class="menu__contact-icon-tel " width="10" height="16">
+                            <a class="contact__item link" href="tel:+48111111111">
+                                <svg class="contact__icon-tel " width="10" height="16">
                                     <use href="./images/icons.svg#icon-smartphone">
                                     </use>
                                 </svg>
@@ -90,7 +85,7 @@
             <div class="container">
 
             <!-- filter buttons - filter by label (web page, app, graphic, marketing, )-->
-                <ul class="portfolio-button__grid">                    
+                <ul class="l-grid l-grid__buttons list-style">                    
                     <li>
                         <button type="button" class="portfolio-button portfolio-button__text">Wszystkie</button>
                     </li>
@@ -112,10 +107,10 @@
         <!-- ----- ------------------------------------------------>
             <!-- ----- Portfolio cards set - flex wrap 3/row  -----                      -->
     
-                <ul class="section__grid section__list">
+                <ul class="l-grid l-grid__cards-wrap list__style">
                 
                 <!-- ----- 1st potfolio card - Technocrack - web-page ----- -->    
-                    <li>
+                    <li class="list__item">
                         <figure id="web-page" class="card portfolio-card" >
                             <a class="link" href="#/">
                                 <div class="portfolio-card__header"> 
@@ -137,7 +132,7 @@
                     </li>
 
                 <!-- ----- 2nd potfolio card - New-Orleans-vs-Golden-Star-graphic - graphic ----- -->
-                    <li>
+                    <li class="list__item">
                         <figure id="graphic" class="portfolio-card">
                             <a class="link" href="#/">                            
                                 <div class="portfolio-card__header"> 
@@ -160,7 +155,7 @@
                     </li>
 
                 <!-- ----- 3rd potfolio card - seafood-restaurant - app ----- -->
-                    <li>
+                    <li class="list__item">
                         <figure id="app" class="portfolio-card">
                             <a class="link" href="#/">
                                 <div class="portfolio-card__header"> 
@@ -184,7 +179,7 @@
                     </li>
 
                 <!-- ----- 4th potfolio card - prime-project - marketing ----- -->
-                    <li>
+                    <li class="list__item">
                         <figure id="marketing" class="portfolio-card">
                             <a class="link" href="#/">
                                 <div class="portfolio-card__header"> 
@@ -207,7 +202,7 @@
                     </li>
 
                 <!-- ----- 5th potfolio card - boxes-project - app ----- -->
-                    <li>
+                    <li class="list__item">
                         <figure id="app" class="portfolio-card">
                             <a class="link" href="#/">
                                 <div class="portfolio-card__header"> 
@@ -230,7 +225,7 @@
                     </li>
 
                 <!-- ----- 6th potfolio card - inspiration-has-no-borders - web-page ----- -->
-                    <li>
+                    <li class="list__item">
                         <figure id="web-page"class="portfolio-card">
                             <a class="link" href="#/">
                                 <div class="portfolio-card__header"> 
@@ -253,7 +248,7 @@
                     </li>
 
                 <!-- ----- 7th potfolio card - limited-edition-magazine - graphic ----- -->
-                    <li>
+                    <li class="list__item">
                         <figure id="graphic" class="portfolio-card">
                             <a class="link" href="#/">
                                 <div class="portfolio-card__header"> 
@@ -276,7 +271,7 @@
                     </li>
 
                 <!-- ----- 8th potfolio card - lab-project - marketing ----- -->
-                    <li>
+                    <li class="list__item">
                         <figure id="marketing" class="portfolio-card">
                             <a class="link" href="#/">
                                 <div class="portfolio-card__header"> 
@@ -299,7 +294,7 @@
                     </li>
 
                 <!-- ----- 9th potfolio card - growing-bussiness - app ----- -->
-                    <li>
+                    <li class="list__item">
                         <figure id="app" class="portfolio-card">
                             <a class="link" href="#/">
                                 <div class="portfolio-card__header"> 

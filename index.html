@@ -20,9 +20,8 @@
 
   <body>
     <!-- ----- ------------------------------------------------>
-    <!-- ----- Section - PAGE HEADER - MENU -----                      -->
-    <!-- ----- same on both sites ------------------------------------------->  
-    <!-- ----- (BEM) default: section, container 
+    <!-- ----- Section - PAGE HEADER ----            --> 
+    <!-- ----- (BEM) default blocks: section, container, logo 
         ustawienie defaultowe:
         1) HEADER jest jeden wspólny dla każdej podstrony -> część wspólna to HEADER. 
         2) HEADER jest wyjątkowym SECTION: indywidualny padding, => modyfikujemy cechy SECTION: padding, background-color, border-bottom> section--
@@ -30,9 +29,12 @@
     
     
     -->
+    
     <header class="page-header-section container">
         <div class="l-grid l-grid__page-header">
-            
+
+            <!-- ----- ------------------------------------------------>
+            <!-- 1st menu item - logo -->        
             <div class="logo page-header__logo">
                 <a class="logo__logotype link" href="./index.html" >
                     <span class="logo__logotype logo__logotype--brand-color">Web</span> 
@@ -40,11 +42,10 @@
                 </a>
             </div>
     
-    <!-- ----- ------------------------------------------------>
-        <!-- 2nd menu item - navigation -->
-            <!-- ------------------------------------>
+            <!-- ----- ------------------------------------------------>
+            <!-- 2nd menu item - navigation -->
             <nav class="nav nav__text">
-                <ul class="nav__display nav__list">
+                <ul class="nav__display nav__list ">
                     <li class="nav__item">
                         <a class="link nav__link link--active" href="./index.html">Agencja</a>
                     </li>
@@ -57,18 +58,13 @@
                 </ul>
             </nav>
     
-    <!-- ----- ------------------------------------------------>
-        <!-- 3rd page-header item - contact links -->
-            <!-- ------------------------------------>
-
+            <!-- ----- ------------------------------------------------>
+            <!-- 3rd page-header item - contact links -->
             <div class="contact contact__text">
                     <ul class="contact__display contact__list">
                         <li>
-                            <a class="contact__item link" 
-                            href="mailto:info@devstudio.com">
-                                <svg class="contact__icon-mail " 
-                                width="16" 
-                                height="12">
+                            <a class="contact__item link" href="mailto:info@devstudio.com">
+                                <svg class="contact__icon-mail" width="16" height="12">
                                     <use href="./images/icons.svg#icon-envelope">
                                     </use>
                                 </svg>

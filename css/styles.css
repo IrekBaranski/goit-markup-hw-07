@@ -149,7 +149,9 @@ p {
     background-color: var(--main-bg-color-white);
     /* default: border: none; shadow: */
 }
-
+.list__style{
+    list-style-type: none;
+}
 
 /* ----- ------------------------------ ----- */
 /* ----- Logo WebStudio - ready to use
@@ -308,7 +310,7 @@ p {
     height: 16px;
     margin-right: 10px;
 
-    fill: inherit   ; 
+    fill: inherit; 
     /*var(--second-color-dark-grey);*/
 }
 .contact__icon-tel {
@@ -340,11 +342,7 @@ p {
     
     background-color: var(--dark-bg-color-black1);
 }
-/*.grid{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}*/
+
 .grid--flex-start{
     align-content: flex-start;
 }
@@ -1098,22 +1096,47 @@ p {
 /* ----- link ./portfolio.html------------------------------------ */
 /* ----- portfolio page -------------------------------------------------------------- ----- */
 
-.portfolio-button__grid {
-    list-style-type: none;
-    display: flex;
-    justify-content: center;
+.l-grid__buttons {
     gap: 0px 8px;
     height: auto;
     margin-bottom: 50px;
-    
 }
+
+.button {
+    display: block;
+    cursor: pointer;
+
+    border-style: none;
+    border-radius: 4px;
+
+    width: 200px;
+    height: 50px;
+    
+    background-color: var(--brand-color-blue);
+    
+    text-align: center;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 1.88;
+    letter-spacing: 0.06em;
+    color: var(--main-color-on-dark-bg-white);
+    
+    transition-property: transform;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+
 .portfolio-button {
     display: block;
     cursor: pointer;
 
     border-style: none;
     border-radius: 4px;
+    
+    height: 38px;
     padding: 6px 22px;
+
     background-color: var(--second-bg-color-white);
 
     transition-property: background-color, color;
@@ -1136,7 +1159,7 @@ p {
 }
 
 .portfolio-button__text {
-    height: 38px;
+    
     text-align: center;
     font-family: 'Roboto', sans-serif;
     font-size: 16px;
@@ -1145,7 +1168,6 @@ p {
     letter-spacing: 0.03em;
 
     color: var(--main-color-black);
-    
 }
 
 /* ----- ---------- ---------- ----- */
@@ -1153,15 +1175,22 @@ p {
 /* ----- 
 /* ----- flex wrap 3/row */
 
-.section__grid {    
-    display: flex;
+.l-grid__cards-wrap {
     flex-wrap: wrap;
-    justify-content:center;
-    gap: 30px 30px; 
-
-   /*background-color: brown;  */
+    gap: 30px 30px;
 }
 
+.card {
+    display: inline-block;
+    max-width: max-content;
+    min-height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    background-color: var(--main-bg-color-white);
+    /* default: border: none; shadow: */
+}    
 .portfolio-card {
     flex-basis: calc((100% - 60px)/3);
 
