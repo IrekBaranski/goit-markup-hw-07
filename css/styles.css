@@ -100,6 +100,11 @@ p {
     padding-bottom: 94px;
     background-color: var(--1st-main-bg-color);
 } 
+.page-header-section {
+    padding: 0;
+    background-color:var(--main-bg-color-white);
+    border-bottom: 1px solid var(--border-color-white2);
+}
 .section__header {
     font-size: 36px;
     font-weight: 700;
@@ -110,6 +115,9 @@ p {
     /*background-color: aquamarine;*/
 }
 /* >>> ZMIENIĆ   na .list - każda lista traci stylowanie  */
+.list-style{
+    list-style-type: none;
+}
 .section__list {
     list-style-type: none;
 }
@@ -118,13 +126,20 @@ p {
     margin-right: auto;
     margin-left: auto;
 }
+
+/* ----- ------------------- ----- *
+/* ----- BLOCK layout grid ----- */
+/* ----- default page grid = l-grid:, mixins: l-grid__*/
+
 .l-grid{
     display: flex;
     justify-content: center;
     justify-items: center;
     align-content: center;
-    align-items: center;   
+    align-items: center;     
 }
+
+
 .link {
     text-decoration: none;
     cursor: pointer;
@@ -149,10 +164,14 @@ p {
     background-color: var(--main-bg-color-white);
     /* default: border: none; shadow: */
 }
-.list__style{
-    list-style-type: none;
-}
 
+
+/* ------ Block TRANSITION - 
+trnasition-property określane w klasach */
+.transition{
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
 /* ----- ------------------------------ ----- */
 /* ----- Logo WebStudio - ready to use
 /* ----- logotype styles: on light & dark background
@@ -179,13 +198,7 @@ p {
 /* ----- ------------------------------ ----- */
 /* ----- ----- PAGE HEADER - MENU ----- ----- */
 /* ----- zostaje ta nazwa ponieważ później używamy nazwy header, page-header jest specyficzny dla tej strony. ALE rozbijamy na ele strukturalne section ------------------------------ ----- */
-
-.page-header-section {
-    padding: 0;
-    background-color:var(--main-bg-color-white);
-    border-bottom: 1px solid var(--border-color-white2);
-}
-.l-grid__page-header{
+.page-header {
     height: 80px;
     padding-left: 15px;
     padding-right: 15px;
@@ -195,10 +208,11 @@ p {
     margin-right: 90px;  
 }
 
-.nav {
+.page-header__nav {
     display: flex;
     flex: 1;  
 }
+
 .nav__text{
     font-size: 14px;
     font-weight: 500;
@@ -206,13 +220,9 @@ p {
     letter-spacing: 0.02em;
     color: var(--main-color-black)
 }
-.nav__display{
+.nav{
     display: flex;   
     gap: 40px;
-}
-.nav__list {
-    list-style-type: none;
-    color: var(--main-color-black); 
 }
 
 .nav__link {
@@ -280,14 +290,10 @@ p {
     justify-content: center;
     gap: 30px;  
 }
-.contact__list{
-    list-style-type: none;
-}
 
 .contact__item {
     display: inline-flex;
-    justify-content: center;
-    
+    justify-content: center;   
     text-decoration: none;
     cursor: pointer;    
     color: var(--second-color-dark-grey);
@@ -1105,14 +1111,13 @@ p {
 .button {
     display: block;
     cursor: pointer;
-
     border-style: none;
     border-radius: 4px;
+}
 
+.button__order {
     width: 200px;
     height: 50px;
-    
-    background-color: var(--brand-color-blue);
     
     text-align: center;
     font-size: 16px;
@@ -1120,46 +1125,16 @@ p {
     line-height: 1.88;
     letter-spacing: 0.06em;
     color: var(--main-color-on-dark-bg-white);
-    
+    background-color: var(--brand-color-blue);
+
     transition-property: transform;
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-
-.portfolio-button {
-    display: block;
-    cursor: pointer;
-
-    border-style: none;
-    border-radius: 4px;
-    
+.button__portfolio {
     height: 38px;
+    width:max-content;
     padding: 6px 22px;
 
-    background-color: var(--second-bg-color-white);
-
-    transition-property: background-color, color;
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.portfolio-button:hover,
-.portfolio-button:focus,
-.portfolio-button:active {
-    /*position: relative;
-    top: -10px;*/
-    
-    background-color: var(--brand-color-blue);
-    color: var(--main-color-on-dark-bg-white);
-
-    
-    /* shadow-middle */
-    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);  
-}
-
-.portfolio-button__text {
-    
     text-align: center;
     font-family: 'Roboto', sans-serif;
     font-size: 16px;
@@ -1168,40 +1143,59 @@ p {
     letter-spacing: 0.03em;
 
     color: var(--main-color-black);
+    background-color: var(--second-bg-color-white);
+    
+    transition-property: background-color, color;
 }
+
+
+.button__portfolio:hover,
+.button__portfolio:focus,
+.button__portfolio:active {
+    /*position: relative;
+    top: -10px;*/
+    
+    background-color: var(--brand-color-blue);
+    color: var(--main-color-on-dark-bg-white);
+
+        /* shadow-middle */
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);  
+}
+
 
 /* ----- ---------- ---------- ----- */
 /* ----- 1st. Section - PORTFOLIO   ----- */
 /* ----- 
 /* ----- flex wrap 3/row */
+/* ----- dodać/ustalić l-grid__card -----*/
 
-.l-grid__cards-wrap {
-    flex-wrap: wrap;
+.l-grid__cards--wrap {
+    flex-wrap: wrap; 
+    flex-basis: calc((100% - 60px)/3);
     gap: 30px 30px;
 }
 
 .card {
-    display: inline-block;
-    max-width: max-content;
-    min-height: auto;
     display: flex;
+    display: inline-block;
     flex-direction: column;
     justify-content: center;
-
+    
+    max-width: max-content;
+    min-height: auto;
     background-color: var(--main-bg-color-white);
     /* default: border: none; shadow: */
+}
+.card--theme-light {
+    background-color: var(--1st-main-bg-color);
 }    
-.portfolio-card {
-    flex-basis: calc((100% - 60px)/3);
-
+.card__portfolio {
     transition-property: box-shadow;
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.portfolio-card:hover,
-.portfolio-card:focus,
-.portfolio-card:active {
+.card__portfolio:hover,
+.card__portfolio:focus,
+.card__portfolio:active {
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
@@ -1229,7 +1223,7 @@ p {
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     
 }
-.portfolio-card:hover .overlay {
+.card__portfolio:hover .overlay {
     transform: translatex(0);   
 }
 
