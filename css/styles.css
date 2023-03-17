@@ -89,11 +89,13 @@ h1,
 h2,
 h3,
 h4,
-p {
-    margin: 0px;
-}
+p { margin: 0px; }
 
-/* ----- (BEM) Global default blocks  ----- */
+.list-style { list-style-type: none;}
+
+/* ----- ---------------------------  ----- */
+/* ----- (BEM) Global blocks  ----- */
+/* ----- ----- section  ----- ----- */
 
 .section {
     padding-top: 94px;
@@ -105,31 +107,64 @@ p {
     background-color:var(--main-bg-color-white);
     border-bottom: 1px solid var(--border-color-white2);
 }
+
+.section__bg-img {
+    width: auto;
+    height: 600px;
+    background-position: center;
+        
+    background-color: var(--dark-bg-color-black1);
+    background-image: linear-gradient(rgba(47, 48, 58, 0.6), rgba(47, 48, 58, 0.4)), 
+    url(../images/heder-banner-opt-people-teams-at-work-.jpg);
+    
+    background-repeat: no-repeat, no-repeat;
+    background-size: cover, 
+ }
+
+.section__short-padding-bottom {
+    padding-bottom: 0px;
+}
+
+.section--bg-light-theme{
+    margin-left: auto;
+    margin-right: auto;
+    background-position: 50% 50%;
+    background-repeat: repeat;
+    background-size:cover;
+    background-position-x: center;
+
+    background-color: var(--second-bg-color-white);
+}
+.section__footer {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    
+    background-color: var(--dark-bg-color-black1);
+}
+
 .section__header {
+    text-align: center;
+    
     font-size: 36px;
     font-weight: 700;
     line-height: 1.17;
     letter-spacing: 0.03em;
-    text-align: center;
     padding-bottom: 50px;
     /*background-color: aquamarine;*/
 }
-/* >>> ZMIENIĆ   na .list - każda lista traci stylowanie  */
-.list-style{
-    list-style-type: none;
-}
-.section__list {
-    list-style-type: none;
-}
+
+/* ----- --------------------- ----- */
+/* ----- ----- container ----- ----- */
 .container {
     width: 1200px;
     margin-right: auto;
     margin-left: auto;
 }
 
+
 /* ----- ------------------- ----- *
 /* ----- BLOCK layout grid ----- */
-/* ----- default page grid = l-grid:, mixins: l-grid__*/
+
 
 .l-grid{
     display: flex;
@@ -138,6 +173,51 @@ p {
     align-content: center;
     align-items: center;     
 }
+
+/*to jest grid*/
+.section__list {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+}
+.order__grid {
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 30px;
+} 
+
+
+.offer-card__grid {
+    column-gap: 30px;
+}
+
+.grid--flex-start{
+    align-content: flex-start;
+}
+.grid__footer{
+
+}
+.footer__grid {
+    display: flex;
+    justify-content: center;
+    column-gap: 70px;
+    align-content: flex-start;
+        
+}
+.l-grid__buttons {
+    gap: 0px 8px;
+    height: auto;
+    margin-bottom: 50px;
+}
+.l-grid__cards--wrap {
+    flex-wrap: wrap; 
+    flex-basis: calc((100% - 60px)/3);
+    gap: 30px 30px;
+}
+
 
 
 .link {
@@ -270,17 +350,6 @@ trnasition-property określane w klasach */
 /* ----- -------------------------------------------- */
 /* ----- 3rd page header item - contact link ----- ----- */
 
-/*
-.l-grid{
-    display: flex;
-    justify-content: center;
-    justify-items: center;
-    align-content: center;
-    align-items: center;   
-}
-
-*/
-
 .contact {
     display: flex;
     padding: 0px 10px;  
@@ -342,26 +411,9 @@ trnasition-property określane w klasach */
 /* ----- Section footer styles: dark background, theme light, ----- */
 /* ----- ------------------------------ ----- */
 
-.section__footer {
-    padding-top: 60px;
-    padding-bottom: 60px;
-    
-    background-color: var(--dark-bg-color-black1);
-}
 
-.grid--flex-start{
-    align-content: flex-start;
-}
-.grid__footer{
 
-}
-.footer__grid {
-    display: flex;
-    justify-content: center;
-    column-gap: 70px;
-    align-content: flex-start;
-        
-}
+
 .footer {
     padding-right: 15px;
     display: flex;
@@ -519,26 +571,6 @@ trnasition-property określane w klasach */
 /* ----- Section  - ORDER - ----- */
 /* section ./header, witout class section, ----- */
 
-.section__order {
-    width: auto;
-    height: 600px;
-    background-position: center;
-        
-    background-color: var(--dark-bg-color-black1);
-    background-image: linear-gradient(rgba(47, 48, 58, 0.6), rgba(47, 48, 58, 0.4)), 
-    url(../images/heder-banner-opt-people-teams-at-work-.jpg);
-    
-    background-repeat: no-repeat, no-repeat;
-    background-size: cover, 
- }
-.order__grid {
-    height: 600px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    row-gap: 30px;
-}
 .order__slogan {
     font-size: 44px;
     font-weight: 900;
@@ -842,9 +874,7 @@ trnasition-property określane w klasach */
 /* ----- article __img, __header icon __text 
 /* ----- !!! WYMAGA POPRAWY ---------------- ----- */
 
-.section__short-padding-bottom {
-    padding-bottom: 0px;
-}
+
 .articles__list {
     display: flex;
     justify-content: center;
@@ -897,14 +927,6 @@ trnasition-property określane w klasach */
 /* ----- -------------------------- -----*/
 /* ----- OFFER Section ----- */
 
-.section__list {
-    display: flex;
-    justify-content: center;
-    list-style-type: none;
-}
-.offer-card__grid {
-    column-gap: 30px;
-}
 .offer-card {
     display: block;
     max-width: 370px;
@@ -939,16 +961,7 @@ trnasition-property określane w klasach */
 /* ----- section our team contain below ---- -----*/
 /* ----- .section--color-bg, figure caption, icons list, links ----- ----- -----*/
 
-.section--color-bg {
-    margin-left: auto;
-    margin-right: auto;
-    background-color: var(--second-bg-color-white);
-    background-position: 50% 50%;
-    background-repeat: repeat;
-    background-size:cover;
-    background-position-x: center;
-    
-}
+
 
 .team-card__set {
     display: flex;
@@ -1102,11 +1115,7 @@ trnasition-property określane w klasach */
 /* ----- link ./portfolio.html------------------------------------ */
 /* ----- portfolio page -------------------------------------------------------------- ----- */
 
-.l-grid__buttons {
-    gap: 0px 8px;
-    height: auto;
-    margin-bottom: 50px;
-}
+
 
 .button {
     display: block;
@@ -1169,11 +1178,6 @@ trnasition-property określane w klasach */
 /* ----- flex wrap 3/row */
 /* ----- dodać/ustalić l-grid__card -----*/
 
-.l-grid__cards--wrap {
-    flex-wrap: wrap; 
-    flex-basis: calc((100% - 60px)/3);
-    gap: 30px 30px;
-}
 
 .card {
     display: flex;
