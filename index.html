@@ -695,7 +695,7 @@
     <!--  cont. logo + address box / social media icons ----- -->
     <!-- ----- ----- --------- ----- ----- -->
 
-    <footer class="section__footer ">
+    <footer class="footer ">
         <div class="container l-grid l-grid__footer"> <!-- grid division: 1/2, 1/2, 1 -->
             
             <!-- 1st footer item - box cont. logo + address box -->
@@ -719,11 +719,11 @@
 
                 <h3 class="footer__label" >DOŁĄCZ DO NAS
                 </h3>
-                <ul class="footer__icons-list">
+                <ul class="icons-grid">
                                                     
                     <!-- social media - 1st icon -insta-->
                     <li>
-                        <a class="icon__bg link " href="#instagram-link" > 
+                        <a class="icon__bg icon__bg--theme-dark link " href="#instagram-link" > 
                             
                             <svg class="icon" 
                             width="20" height="20">
@@ -735,8 +735,8 @@
 
                     <!-- social media - 2nd icon -twitter -->    
                         <li>
-                            <a class="footer__icon-bg link" href="#twitter-link" > 
-                                <svg class="footer__icon" 
+                            <a class="icon__bg icon__bg--theme-dark link" href="#twitter-link" > 
+                                <svg class="icon" 
                                 width="20" height="20">
                                     <use href="./images/icons.svg#icon-twitter-1"></use>
                                 </svg>
@@ -745,8 +745,8 @@
                         
                     <!-- social media - 3rd icon - facebook -->
                         <li>
-                            <a class="footer__icon-bg link" href="#facebook-link" > 
-                                <svg class="footer__icon" 
+                            <a class="icon__bg icon__bg--theme-dark link" href="#facebook-link" > 
+                                <svg class="icon" 
                                 width="20" height="20">
                                     <use href="./images/icons.svg#icon-facebook-1"></use>
                                 </svg>
@@ -755,8 +755,8 @@
 
                     <!-- social media - 4th icon - linkedIn -->  
                         <li>
-                            <a class="footer__icon-bg link" href="#footerlinkedin-link" > 
-                                <svg class=".footer__icon" 
+                            <a class="icon__bg icon__bg--theme-dark link" href="#footerlinkedin-link" > 
+                                <svg class="icon" 
                                 width="20" height="20">
                                     <use href="./images/icons.svg#icon-linkedin-1"></use>
                                 </svg>
@@ -766,31 +766,32 @@
                 </ul>
             </div>
 
-            <form class="footer__item footer-form" name="newsletter_email" action="/singnup" method="post" autocomplete="off" target="_self" validate>
-                <label class="footer__label" for="email" >ZAPISZ SIĘ DO NEWSLETTERA
-                </label>
-                <div class="footer-form__grid">
-                    <input  
-                    class="footer-form__input" 
-                    type="email"
-                    id="email" 
-                    name="newsletter-user-email" 
-                    placeholder="E-mail, example@mail.com" 
-                    />
-                    <button class="button footer-btn" type="submit">
-                        <div class="footer-btn__grid">
-                            <span class="footer-btn__text">
-                            Zapisz się
-                            </span>
-                            <svg class="footer-btn__icon" width="24" height="24">
-                                <use href="./images/icons.svg#icon-icon-send"/>
-                            </svg>
-                        </div>
-                    </button>
-                </label>
-                        </div>                             
-                        
-                    </p>
+            <div class="footer__item">
+                <form class="footer__item footer-form" name="newsletter_email" action="/singnup" method="post" autocomplete="off" target="_self" validate>
+                    <label class="footer__label" for="email" >ZAPISZ SIĘ DO NEWSLETTERA
+                    </label>
+                    <div class="footer-form__grid">
+                        <input  
+                        class="footer-form__input" 
+                        type="email"
+                        id="email" 
+                        name="newsletter-user-email" 
+                        placeholder="E-mail, example@mail.com" 
+                        />
+                        <button class="button footer-btn" type="submit">
+                            <div class="footer-btn__grid">
+                                <span class="footer-btn__text">
+                                Zapisz się
+                                </span>
+                                <svg class="footer-btn__icon" width="24" height="24">
+                                    <use href="./images/icons.svg#icon-icon-send"/>
+                                </svg>
+                            </div>
+                        </button>
+                    </label>
+                            </div>                             
+                            
+                        </p>
 
                 </form>
             </div>
