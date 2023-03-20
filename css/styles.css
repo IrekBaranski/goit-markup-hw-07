@@ -91,7 +91,7 @@ h3,
 h4,
 p { margin: 0px; }
 
-.list-style { list-style-type: none;}
+.list-style {list-style-type: none;}
 
 /* ----- ---------------------------  ----- */
 /* ----- (BEM) Global blocks  ----- */
@@ -102,12 +102,6 @@ p { margin: 0px; }
     padding-bottom: 94px;
     background-color: var(--1st-main-bg-color);
 } 
-.page-header-section {
-    padding: 0;
-    background-color:var(--main-bg-color-white);
-    border-bottom: 1px solid var(--border-color-white2);
-}
-
 .section__bg-img {
     width: auto;
     height: 600px;
@@ -121,7 +115,7 @@ p { margin: 0px; }
     background-size: cover, 
  }
 
-.section__short-padding-bottom {
+.section--bottom-padding-short {
     padding-bottom: 0px;
 }
 
@@ -156,9 +150,10 @@ p { margin: 0px; }
 /* ----- --------------------- ----- */
 /* ----- ----- container ----- ----- */
 .container {
+    margin: 0 auto;
+    padding-left: 15px;
+    padding-right: 15px;
     width: 1200px;
-    margin-right: auto;
-    margin-left: auto;
 }
 
 
@@ -166,58 +161,29 @@ p { margin: 0px; }
 /* ----- BLOCK layout grid ----- */
 
 
-.l-grid{
-    display: flex;
-    justify-content: center;
-    justify-items: center;
-    align-content: center;
-    align-items: center;  
+.l-grid__page-header{
+    height: 80px;
 }
-
 .l-grid--wrap {
     flex-wrap: wrap; 
     flex-basis: calc((100% - 60px)/3);
-    gap: 30px 30px;
 }
 
-/*to jest grid*/
-.section__list {
-    display: flex;
-    justify-content: center;
-    list-style-type: none;
-}
 .l-grid--direction-column {
     height: 600px;
     flex-direction: column;
-    row-gap: 30px;
-} 
-
-
-.offer-card__grid {
-    column-gap: 30px;
 }
 
 .grid--flex-start{
     align-content: flex-start;
 }
-.grid__footer{
 
-}
-.footer__grid {
-    display: flex;
-    justify-content: center;
-    column-gap: 70px;
-    align-content: flex-start;
-        
-}
+
 .l-grid__buttons {
     gap: 0px 8px;
     height: auto;
     margin-bottom: 50px;
 }
-
-
-
 
 .link {
     text-decoration: none;
@@ -231,19 +197,6 @@ p { margin: 0px; }
 .link:active,
 .link:focus {color: var(--brand-color-blue);
 }
-
-.card {
-    display: inline-block;
-    max-width: max-content;
-    min-height: auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-
-    background-color: var(--main-bg-color-white);
-    /* default: border: none; shadow: */
-}
-
 
 /* ------ Block TRANSITION - 
 trnasition-property określane w klasach */
@@ -277,18 +230,16 @@ trnasition-property określane w klasach */
 /* ----- ------------------------------ ----- */
 /* ----- ----- PAGE HEADER - MENU ----- ----- */
 /* ----- zostaje ta nazwa ponieważ później używamy nazwy header, page-header jest specyficzny dla tej strony. ALE rozbijamy na ele strukturalne section ------------------------------ ----- */
-.page-header {
-    height: 80px;
-    padding-left: 15px;
-    padding-right: 15px;
+.page-header{
+    background-color:var(--main-bg-color-white);
+    border-bottom: 1px solid var(--border-color-white2);
 }
 
 .page-header__logo {
-    margin-right: 90px;  
+    margin-right: 63px;  
 }
 
 .page-header__nav {
-    display: flex;
     flex: 1;  
 }
 
@@ -409,19 +360,19 @@ trnasition-property określane w klasach */
 /* ----- ------------------------------ ----- */
 /* ----- Section footer styles: dark background, theme light, ----- */
 /* ----- ------------------------------ ----- */
-
-
-
-
-.footer {
-    padding-right: 15px;
+.l-grid{
     display: flex;
-    align-content: flex-start;
-    column-gap: 70px;
-
-   /* background-color: gold; */
+    justify-content: center;
+    align-items: center;  
+    gap: 30px 30px;
+    list-style-type: none
 }
-
+.l-grid__footer {
+    row-gap: 0px;
+    column-gap: 70px;
+    align-content: flex-start;
+        
+}
 .footer__item {
     display: flex;
     flex-direction: column;
@@ -872,16 +823,6 @@ trnasition-property określane w klasach */
 /* ----- section, __short-padding-bottom
 /* ----- article __img, __header icon __text 
 /* ----- !!! WYMAGA POPRAWY ---------------- ----- */
-
-
-.articles__list {
-    display: flex;
-    justify-content: center;
-    column-gap: 30px;
-    
-    list-style: none; 
-}
-
 .article {
     max-width: 270px;
     /*background-color: coral;*/
@@ -889,13 +830,12 @@ trnasition-property określane w klasach */
 .article__figure {
     width: 270px;
     height: 120px;
+    margin-bottom: 30px;
+    background-color: var(--second-bg-color-white);
+
     display: flex;
     justify-content: center;
-    align-items: center;
-
-    margin-bottom: 30px;
-    
-    background-color: var(--second-bg-color-white);
+    align-items: center;   
 }
 .article__icon {
     display: block;
@@ -924,24 +864,31 @@ trnasition-property określane w klasach */
 }
 
 /* ----- -------------------------- -----*/
-/* ----- OFFER Section ----- */
+/* ----- BLOCK ------ card ----- */
 
-.offer-card {
-    display: block;
-    max-width: 370px;
-    height: max-content;
-    margin: 0px;
+.card {
     position: relative;
+    display: inline-block;
+    display: flex;
+    flex-direction: column;
+    /*justify-content: center;*/
     
+    max-width: max-content;
+    min-height: auto;
+    max-height: max-content;
+
+    background-color: var(--main-bg-color-white);
+    /* default: border: none; shadow: */
 }
-.offer-card__img{
+.card__offer-card{max-width: 370px;}
+
+.card__img{
     display: block;
 }
 
-.offer-card__label {
+.card__offer-label{
     position: absolute;
-    bottom: 0; 
-    
+    bottom: 0;
     display: block;
     width: 370px;
     height: 70px;
@@ -956,32 +903,7 @@ trnasition-property określane w klasach */
     background: linear-gradient(0deg, var(--svg-bg-color-black01), 0%, var(--dark-bg-color-black08, 50%)) ;
 }
 
-/* ----- ---------- ---------- ---------------------*/
-/* ----- section our team contain below ---- -----*/
-/* ----- .section--color-bg, figure caption, icons list, links ----- ----- -----*/
-
-
-
-.team-card__set {
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-}
-
-/* ----- team card -> figure contain personalized card with: img, name, description, social media links, icons ----*/
-/*card{
-    display: inline-block;
-    max-width: max-content;
-    min-height: auto
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-
-    background-color: var(--main-bg-color-white);
-
-}*/
-
-.team-card {
+.card__team-card {
     max-width: 270px;
     min-height: auto;
     
@@ -990,31 +912,22 @@ trnasition-property określane w klasach */
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 0px 0px 4px 4px;
 }
-.team-card__img {
-    display: block;
-    width: auto;
-    height: 260px;
-}
 
-.team-card__body{
+.card__body{
     width: auto;
     height: auto;
     margin: 0px;
-    padding: 30px 32px;
-    
-    /*background-color: lightgreen;*/
-        
+    padding: 30px 32px;      
 }
-.team-card__name {
+.card__name {
     font-size: 16px;
     font-weight: 500;
     line-height: 1.19;
     letter-spacing: 0.03em;
     text-align: center;
-    margin-bottom: 10px;
-        
+    margin-bottom: 10px;      
 }
-.team-card__description {
+.card__description {
     font-size: 16px;
     line-height: 1.19;
     letter-spacing: 0.03em;
@@ -1026,17 +939,14 @@ trnasition-property określane w klasach */
 
 /* ----- def social media icons - ---- */
 
-.team-card__icons-list {
-      
+.icons-grid {
     display: flex;
     justify-content: center;
     align-content: center;
     column-gap: 10px;
     list-style: none;
-    /*background-color: chartreuse;*/
-   
 }
-.team-card__icon-bg {
+.icon__bg {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -1054,13 +964,13 @@ trnasition-property określane w klasach */
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.team-card__icon{
+.icon{
     display: inline-block;    
     fill: inherit;
 }
 
-.team-card__icon-bg:focus,
-.team-card__icon-bg:hover{
+.icon__bg:focus,
+.icon__bg:hover{
     fill: var(--main-bg-color-white);
     background-color: var(--brand-color-blue);
 }
@@ -1070,14 +980,7 @@ trnasition-property określane w klasach */
 /* ----- section our client contain below ---- -----*/
 /* ----- figure caption, icons list, links ----- ----- -----*/
 
-.client__list {
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-
-    list-style-type: none;
-}
-.client__item {
+.icon__big-bg {
     width: 168px;
     height: 90px;
     display: flex;
@@ -1089,21 +992,25 @@ trnasition-property określane w klasach */
 
     fill: var(--svg-color-lgrey);
 
-    transition-property: background-color, fill;
+    transition-property: border-color, fill;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     
 }
 
-.client__icon{
-    display: block;
+.icon{
+    display: inline-block;    
+    fill: inherit;  
+}
+.icon--big{
     width: 100px;
     height: 60px;
-    fill: inherit;
+   
 }
-
-.client__item:hover,
-.client__item:focus {
+.icon__big-bg:hover,
+.icon__big-bg:focus,
+.icon--big:hover,
+.icon--big:focus {
     fill: var(--brand-color-blue);
     border-color: var(--brand-color-blue);
     
@@ -1177,18 +1084,6 @@ trnasition-property określane w klasach */
 /* ----- flex wrap 3/row */
 /* ----- dodać/ustalić l-grid__card -----*/
 
-
-.card {
-    display: flex;
-    display: inline-block;
-    flex-direction: column;
-    justify-content: center;
-    
-    max-width: max-content;
-    min-height: auto;
-    background-color: var(--main-bg-color-white);
-    /* default: border: none; shadow: */
-}
 .card--theme-light {
     background-color: var(--1st-main-bg-color);
 }    
