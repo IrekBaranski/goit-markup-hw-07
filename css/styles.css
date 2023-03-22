@@ -417,6 +417,7 @@ trnasition-property określane w klasach */
 
     color: var(--main-color-on-dark-bg-white);
 }
+/* to są buttony*/ 
 
 .footer__icons {
     list-style-type: none;
@@ -930,7 +931,9 @@ trnasition-property określane w klasach */
     color: var(--second-color-dark-grey);
 }
 
-/* ----- def social media icons - ---- */
+/* ----- def social media buttons - ---- */
+
+
 
 .icons-grid {
     display: flex;
@@ -1020,8 +1023,6 @@ trnasition-property określane w klasach */
 /* ----- Page PORTFOLIO ----- ----- */
 /* ----- link ./portfolio.html------------------------------------ */
 /* ----- portfolio page -------------------------------------------------------------- ----- */
-
-
 
 .button {
     display: block;
