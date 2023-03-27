@@ -54,8 +54,8 @@
     --brand-color-blue: rgb(33, 150, 243);
     --brand-color-blue-a09: rgba(33, 150, 243, 0.9);
     
-    --logotype-dark-theme: rgb(0, 0, 0);
-    --logotype-light-theme: rgb(255, 255, 255);
+    --logotype-dark-theme: black;
+    --logotype-light-theme: white;
     
     /*background & shadow colors*/
     --main-bg-color-white: rgb(255, 255, 255);
@@ -153,7 +153,15 @@ p { margin: 0px; }
 
 /* ----- ------------------- ----- *
 /* ----- BLOCK layout grid ----- */
-
+.l-grid{
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    align-content: center;  
+    gap: 30px 30px;
+    list-style-type: none
+}
 
 .l-grid__page-header{
     height: 80px;
@@ -354,15 +362,7 @@ trnasition-property określane w klasach */
 /* ----- ------------------------------ ----- */
 /* ----- Section footer styles: dark background, theme light, ----- */
 /* ----- ------------------------------ ----- */
-.l-grid{
-    display: flex;
-    justify-content: center;
-    justify-items: center;
-    align-items: center;
-    align-content: center;  
-    gap: 30px 30px;
-    list-style-type: none
-}
+
 .footer {
     padding-top: 60px;
     padding-bottom: 60px;

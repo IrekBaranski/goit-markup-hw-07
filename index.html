@@ -2,20 +2,22 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" >
-    <meta name="description" content="Nauka podstaw HTML5, grupa HTML+CSS PL ON 11, zadanie domowe nr 3, autor: Ireneusz Barański" >
-    <title>WebStudio- main page</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="WebStudio -page, autor: Ireneusz Barański" />
+    <title>WebStudio-main page</title>
 
-    <link rel="stylesheet" href="./css/modern-normalize.min.css" />
-    <link rel="stylesheet" href="./css/styles.css" />
+    <!-- ----- Fonts ----- -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
     
-    <!--
-    <style> 
-        @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap'); 
-    </style>
-    -->
+    <!-- ----- Normalize ----- -->
+    <link rel="stylesheet" href="./css/modern-normalize.min.css" />
+
+    <!-- ----- Styles ----- -->
+    <!-- ZMIANA NA href="./css/main.min.css" ./css/styles.css-->
+    <link rel="stylesheet" href="./css/main.min.css" />
   </head>
 
   <body>
@@ -45,7 +47,7 @@
             <nav class="page-header__nav nav__text">
                 <ul class="nav list-style">
                     <li class="nav__item">
-                        <a class="link nav__link link--active" href="./index.html">Agencja</a>
+                        <a class="link nav__link transition link--active" href="./index.html">Agencja</a>
                     </li>
                     <li class="nav__item">
                         <a class="link nav__link" href="./portfolio.html">Portfolio</a>
@@ -99,7 +101,7 @@
         <header class="section__bg-img">
             <div class="container">
                 <div class="l-grid l-grid--direction-column">
-                    <h1 class="order__slogan">EFEKTYWNE ROZWIĄZANIA <br> DLA WASZEGO BIZNESU </h1>
+                    <h1 class="section__header-big">EFEKTYWNE ROZWIĄZANIA <br> DLA WASZEGO BIZNESU </h1>
                 
                 <!-- modal (js)  -->
 

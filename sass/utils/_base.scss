@@ -1,0 +1,40 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+body {
+    font-family: $mainFont;
+    color: getColor('font-dark');   
+    background-color: getColor('bg-light-main');   
+}
+ul,
+li {
+    margin-block: 0px;
+    padding-inline-start: 0p;
+    margin: 0px;
+    }
+ul,
+h1,
+h2,
+h3,
+h4,
+p {margin: 0px;}
+
+.list-style {list-style-type: none;}
+
+.link {
+    text-decoration: none;
+    color: getColor('font-dark');
+    cursor: pointer;
+    transition-property: color;
+
+    &:hover,
+    &:active,
+    &:focus
+    {color: getColor('accent');}
+}
+
+.transition     {
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}

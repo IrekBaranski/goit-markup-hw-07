@@ -1,0 +1,48 @@
+.footer {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    
+    background-color: var(--dark-bg-color-black1);
+
+    &__item {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: stretch;
+        row-gap: 20px;
+    } 
+
+    &__label{
+        margin-top: 12px;
+    
+        font-style: normal;
+        font-weight: 700;
+        font-size: 14px;
+        line-height: calc(16/14)px;
+        letter-spacing: 0.03em;
+        text-transform: uppercase;
+    
+        color: var(--main-color-on-dark-bg-white);
+    }
+
+    &__icon-bg {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 44px;
+        width: 44px;
+        border-radius: 50%;
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+        
+        background-color: var(--svg-bg-color-black01);
+        fill: var(--main-color-on-dark-bg-white);
+    
+        transition-property: background-color, fill;
+        transition-duration: 250ms;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+    }
+}
+
