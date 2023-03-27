@@ -1,0 +1,74 @@
+.card{
+    position: relative;
+    display: inline-block;
+    display: flex;
+    flex-direction: column;
+        
+    max-width: max-content;
+    min-height: auto;
+    max-height: max-content;
+
+    background-color: getColor('bg-light-main');
+    
+    &__offer-card{max-width: 370px;}
+
+    &__team-card {
+        max-width: 270px;
+        min-height: auto;
+        
+        background: getColor('bg-light-main');
+    
+        box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+        border-radius: 0px 0px 4px 4px;
+    }
+
+    &___portfolio {
+        transition-property: box-shadow;
+    }
+    
+    &:hover,
+    &:focus,
+    &:active {
+        box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+    }
+    
+   
+
+    &__body {
+        width: auto;
+        height: auto;
+        margin: 0px;
+        padding: 30px 32px;
+    }
+        
+    &__img{
+        display: block;
+    }
+
+    &__name{
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 1.19;
+        letter-spacing: 0.03em;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    &__description{
+        font-size: 16px;
+        line-height: 1.19;
+        letter-spacing: 0.03em;
+        text-align: center;
+        margin-bottom: 16px;
+
+        color: getColor('font-grey');
+    }
+
+    &__round-btn{
+        list-style-type: none;
+        display: flex;
+        justify-content: space-between;
+        gap: 10px;
+    }
+
+}
