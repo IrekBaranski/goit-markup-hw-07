@@ -494,17 +494,15 @@ trnasition-property określane w klasach */
     border-color: var(--brand-color-blue);
 }
 
-.footer__btn{
+.btn__grid{
     padding: 10px 26px 10px 42px;
-}
-.footer-btn__grid{
     display: flex;
     justify-content: start;
     align-items: center;
     gap: 24px;
     
 }
-.footer-btn__icon{
+.btn__icon{
     display: inline-block;
     fill: var(--main-bg-color-white);
 }
