@@ -2,7 +2,7 @@
     padding-top: 60px;
     padding-bottom: 60px;
     
-    background-color: var(--dark-bg-color-black1);
+    background-color: getColor('bg-dark-main');
 
     &__item {
         display: flex;
@@ -22,27 +22,75 @@
         letter-spacing: 0.03em;
         text-transform: uppercase;
     
-        color: var(--main-color-on-dark-bg-white);
+        color: getColor('font-light-main');
     }
 
-    &__icon-bg {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 44px;
-        width: 44px;
-        border-radius: 50%;
-        background-size: contain;
-        background-position: center;
-        background-repeat: no-repeat;
-        
-        background-color: var(--svg-bg-color-black01);
-        fill: var(--main-color-on-dark-bg-white);
-    
-        transition-property: background-color, fill;
-        transition-duration: 250ms;
-        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    /*&__logo {}*/
 
+    &__round-btn{
+        list-style-type: none;
+        display: flex;
+        justify-content: space-between;
+        gap: 10px;
+    }
+}
+
+.address {
+    text-decoration: none;
+    height: 81px;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+       
+    font-size: 14px;
+    font-style: normal;
+    line-height: 1.7;
+    letter-spacing: 0.03em;
+    text-align: left;
+    
+    color:  getColor('font-light-main');
+
+    &--cl-grey{
+        color: getColor('font-light-main-a06');
+    }
+}
+.footer-form {
+    max-width: 570px;
+    height: 50px;
+    flex:2;
+
+    &__grid{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap:12px;
+    }
+
+
+    &__input{ 
+    width: 350px;
+    height: 50px;
+    padding: 10px;
+    border-radius: 4px; 
+    border: 1px solid getColor('border-light-main-a03');
+
+    font-size: 16px;
+    line-height: calc(20/16) px;
+    letter-spacing: 0.03em;
+    text-align: left;
+
+    color: getColor('font-light-main-a06'); 
+    /*border-color: getColor('border-light-main-a03');*/
+    background-color: getColor('bg-dark-main');
+
+    transition-property: border-color;
+   
+    &:hover,
+    &:focus,
+    &:active {
+        border-color: getColor('accent');
+    }
     }
 }
 

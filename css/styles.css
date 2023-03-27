@@ -384,9 +384,9 @@ trnasition-property określane w klasach */
 
 /* ----- 1st footer item - logo + address box ----- */
 
-.address__link--color { color: var(--second-color-dark-bg-white-06a);}
+.address--color { color: var(--second-color-dark-bg-white-06a);}
 
-.address__box {
+.address {
     text-decoration: none;
     height: 81px;
     
@@ -453,7 +453,7 @@ trnasition-property określane w klasach */
     fill: var(--main-bg-color-white);
     background-color: var(--brand-color-blue);
 }
-
+/* ----- powyższ eokreślone jako round-btn ----- */
 /* ----- 3-rd footer item - Form - ----- */
 
 .footer-form{

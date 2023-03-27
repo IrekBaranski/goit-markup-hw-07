@@ -80,4 +80,10 @@
         height: 600px;
         flex-direction: column;
     }
+
+    &__footer {
+        gap: 0px 70px;
+        align-content: flex-start;
+        align-items: baseline;
+    }
 }

@@ -35,6 +35,7 @@ $colors: (
     'font-grey-a05': rgba(117, 117, 117, 0.5),
     'font-light-main': white,
     'font-light-main-a06': rgba(255, 255, 255, 0.6),
+    'font-light-main-a03': rgba(255, 255, 255, 0.3),
 
     'bg-dark-main': rgb(47, 48, 58),
     'bg-dark-main-a08': rgba(47, 48, 58, 0.8),
@@ -48,6 +49,10 @@ $colors: (
     
     'border-light1': rgb(238, 238, 238),
     'border-light2': rgb(236, 236, 236),
+    'border-light-main': white,
+    'border-light-main-a06': rgba(255, 255, 255, 0.6),
+    'border-light-main-a03': rgba(255, 255, 255, 0.3),
+
     'border-dark-a02': rgba(33, 33, 33, 0.2),
 
     'svg-path-main': rgba(175, 177, 183, 1),
