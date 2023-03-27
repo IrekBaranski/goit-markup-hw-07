@@ -287,13 +287,79 @@ p {
   color: white;
 }
 
-.order__slogan {
-  font-size: 44px;
-  font-weight: 900;
-  line-height: 1.36;
-  letter-spacing: 0.06em;
+.btn {
+  display: block;
+  width: 200px;
+  height: 50px;
+  border-style: none;
+  border-radius: 4px;
+  background-color: rgb(33, 150, 243);
+  -webkit-box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+          box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+  -webkit-transition-property: -webkit-transform;
+  transition-property: -webkit-transform;
+  transition-property: transform;
+  transition-property: transform, -webkit-transform;
+}
+.btn__txt {
   text-align: center;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.88;
+  letter-spacing: 0.06em;
   color: white;
+}
+
+.round-btn {
+  display: block;
+  height: 44px;
+  width: 44px;
+  border-style: none;
+  border-radius: 50%;
+  background-color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  /*background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;*/
+  -webkit-transition-property: background-color, fill;
+  transition-property: background-color, fill;
+  -webkit-transition-duration: 250ms;
+          transition-duration: 250ms;
+  -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+          transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.round-btn--light-theme {
+  background-color: white;
+  fill: rgb(175, 177, 183);
+  -webkit-transition-property: background-color, fill;
+  transition-property: background-color, fill;
+  /*&:focus,
+  &:hover{
+  fill:  getColor('svg-path-sec');
+  background-color: getColor('accent');
+  }*/
+}
+.round-btn--dark-theme {
+  background-color: rgba(255, 255, 255, 0.1);
+  fill: white;
+  -webkit-transition-property: background-color;
+  transition-property: background-color;
+}
+.round-btn--dark-theme:focus, .round-btn--dark-theme:hover {
+  background-color: rgb(33, 150, 243);
+}
+.round-btn:focus, .round-btn:hover {
+  fill: white;
+  background-color: rgb(33, 150, 243);
 }
 
 .order__slogan {

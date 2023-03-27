@@ -1,0 +1,78 @@
+.btn {
+    display: block;
+    
+    width: 200px;
+    height: 50px;
+    border-style: none;
+    border-radius: 4px;    
+    background-color: getColor('accent');
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+
+    cursor: pointer;
+    transition-property: transform;
+
+    &__txt{
+        text-align: center;
+        
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 1.88;
+        letter-spacing: 0.06em;
+        color: getColor('font-light-main');
+    }
+
+}
+
+.round-btn {
+    display: block;
+    
+    height: 44px;
+    width: 44px;
+    border-style: none;
+    border-radius: 50%;
+    background-color: getColor('bg-light-main');
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &--light-theme{
+        background-color: getColor('bg-light-main');
+        fill: getColor('svg-path-main');
+        transition-property: background-color, fill;
+
+        /*&:focus,
+        &:hover{
+        fill:  getColor('svg-path-sec');
+        background-color: getColor('accent');
+        }*/
+    }
+
+    &--dark-theme{
+        background-color: getColor('bg-light-main-a01');
+        fill: getColor('svg-path-sec');
+        transition-property: background-color;
+
+        &:focus,
+        &:hover{
+        background-color: getColor('accent');
+        }
+    }
+
+    &:focus,
+    &:hover{
+    fill:  getColor('svg-path-sec');
+    background-color: getColor('accent');
+    }
+
+    /*background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;*/
+    
+    
+
+
+    transition-property: background-color, fill;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}

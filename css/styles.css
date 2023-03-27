@@ -494,7 +494,7 @@ trnasition-property określane w klasach */
     border-color: var(--brand-color-blue);
 }
 
-.footer-btn{
+.footer__btn{
     padding: 10px 26px 10px 42px;
 }
 .footer-btn__grid{
@@ -514,7 +514,7 @@ trnasition-property określane w klasach */
 /* ----- ------------------------------ ----- */
 /* ----- Section  - ORDER - ----- */
 /* section ./header, witout class section, ----- */
-
+/* to jest element bloku typu header */
 .order__slogan {
     font-size: 44px;
     font-weight: 900;

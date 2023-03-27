@@ -49,6 +49,9 @@ $colors: (
     'border-light1': rgb(238, 238, 238),
     'border-light2': rgb(236, 236, 236),
     'border-dark-a02': rgba(33, 33, 33, 0.2),
+
+    'svg-path-main': rgba(175, 177, 183, 1),
+    'svg-path-sec': white,
 );
 @function getColor($key) {
     @return map-get($colors, $key);
