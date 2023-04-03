@@ -20,6 +20,7 @@
     <!-- ZMIANA NA href="./css/main.min.css" ./css/styles.css-->
     <link rel="stylesheet" href="./css/main.min.css" />
   </head>
+  
   <body>
     <header class="page-header">
         <div class="container">
@@ -47,7 +48,7 @@
 
                     <!-- modal mobile menu-->
                     <div class="backdrop is-hidden" data-modal>
-                        <ul class="menu__mobile">
+                        <ul class="menu__mobile list-style">
                             <li>
                                 <a class="link menu__link" href="#Hero">
                                     Anemone
@@ -84,12 +85,58 @@
                     <!-- mobile menu - ended-->
                 </nav>
             </div>
-                    
+            <div class="l-grid page-header__l-grid">
+                
+                <!-- MENU - 1st item - logo -->
+                <div class="logo page-header__logo">
+                    <svg class="logo__icon"  width="72" height="57">
+                        <use href="./images/icons.svg#icon-logo"></use>
+                    </svg>
+                </div>
 
+                <!-- MENU - 2nd item - nav -->
+                <nav class="nav nav__text page-header__nav">
+                    <ul class="nav list-style">
+                        <li class="nav__item">
+                            <a class="link nav__link" href="#Hero">
+                                Anemone
+                            </a>
+                        </li>
+                        <li class="nav__item">
+                            <a class="link nav__link" href="#About">
+                                About us
+                            </a>
+                        </li>
+                        <li class="nav__item">
+                            <a class="link nav__link" href="#Store">
+                                Store
+                            </a>
+                        </li>
+                        <li class="nav__item">
+                            <a class="link nav__link" href="#Delivery">
+                                Delivery
+                            </a>
+                        </li>
+                        <li class="nav__item">
+                            <a class="link nav__link" href="#Blog">
+                                Blog
+                            </a>
+                        </li>
+                    </ul>
+
+                </nav>
+
+                <!-- MENU - 3rd item - link contact us -->
+                <a class="link btn" href="tel: " type="button">
+                    <svg class="icon icon__tel" 
+                        width="22" height="22">
+                        <use href="./images/icons.svg#icon-tel">
+                        </use>
+                    </svg>
+                </a>
+
+            </div>
         </div>
-
-
-
     </header>
 
     <main>
