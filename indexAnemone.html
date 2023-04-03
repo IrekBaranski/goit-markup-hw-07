@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" >
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <meta name="description" content="Anemone - Flower Studio   , autor: Ireneusz Barański" />
+    <title>Anemone</title>
+
+    <!-- ----- Fonts ----- -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- ----- Normalize ----- -->
+    <link rel="stylesheet" href="./css/modern-normalize.min.css" />
+
+    <!-- ----- Styles ----- -->
+    <!-- ZMIANA NA href="./css/main.min.css" ./css/styles.css-->
+    <link rel="stylesheet" href="./css/main.min.css" />
+  </head>
+  <body>
+    <header class="page-header">
+        <div class="container">
+            <div class="menu__mobile">
+                <div class="logo page-header__logo">
+                    <svg class="logo__icon"  width="45" height="35">
+                        <use href="./images/icons.svg#icon-logo"></use>
+                    </svg>
+                </div>
+                <a class="link btn link__mobile" href="tel: " type="button">
+                    <svg class="icon icon__tel" 
+                        width="20" height="20">
+                        <use href="./images/icons.svg#icon-tel">
+                        </use>
+                    </svg>
+                </a>
+                <nav class="nav nav__mobile">
+                    <button data-modal-open class="btn btn__mobile modal__btn" type="button">
+                        <svg class="icon icon__menu" 
+                            width="20" height="20">
+                            <use href="./images/icons.svg#icon-burger-menu">
+                            </use>
+                        </svg>
+                    </button>
+
+                    <!-- modal mobile menu-->
+                    <div class="backdrop is-hidden" data-modal>
+                        <ul class="menu__mobile">
+                            <li>
+                                <a class="link menu__link" href="#Hero">
+                                    Anemone
+                                </a>
+                            </li>
+                            <li>
+                                <a class="link menu__link" href="#About">
+                                    About us
+                                </a>
+                            </li>
+                            <li>
+                                <a class="link menu__link" href="#Store">
+                                    Store
+                                </a>
+                            </li>
+                            <li>
+                                <a class="link menu__link" href="#Delivery">
+                                    Delivery
+                                </a>
+                            </li>
+                            <li>
+                                <a class="link menu__link" href="#Blog">
+                                    Blog
+                                </a>
+                            </li>
+                        </ul>
+                        <button data-modal-close class="modal_btn_close">
+                            <svg class="icon__close"
+                                width="12" height="12">
+                                <use href="./images/icons.svg#icon-close-X"></use>
+                            </svg>
+                        </button>
+                    </div>
+                    <!-- mobile menu - ended-->
+                </nav>
+            </div>
+                    
+
+        </div>
+
+
+
+    </header>
+
+    <main>
+        <div class="media-container"></div>
+        
+        <!-- Section Hero -->
+            <section id="Hero" class="section section--header">
+                <h1 class="section__title">ANEMONE</h2>
+                <ul class="Section__grid">
+                    <li class="section__item">
+                        <p>flower studio</p>
+                    </li>
+                    <li class="section__item">
+                        <img class="main-img"
+                        src="./images/"
+                        alt="home page różowy kwiat"
+                        width="145" height="274"
+                        >
+                    </li>
+                    <li class="section__item">
+                        <button data-modal-open 
+                        class="btn-main btn-main__img modal__btn" 
+                        type="button">
+                            <svg class="icon btn-main__icon" 
+                                width="64" height="64">
+                                <use href="./images/icons.svg#icon-now-shop"></use>
+                            </svg> 
+                        </button>
+
+                    </li>
+                    
+                </ul>              
+                
+            </section>
+
+        <!-- Section About -->
+            <section id="About" class="section">
+                <h2 class="section__title">ABOUT</h2>
+                <ul class="Section__grid">
+                    <li class="section__item">
+                        <article class="aticle article__media">
+                            <p class="article__text">
+                                We are a minimalistic flower studio. We love people and flowers. Therefore, every day we give people the beauty and joy creating stylish and modern masterpieces. Every bouquet we create is unique as you are.
+                            </p>
+                            <img class="img article__img"
+                            src="images/bouquetAbout.jpg" alt="bukiet, 2 kwiaty, różowe"
+                            width="288" height="178"
+                            >
+                        </article>
+                    </li> 
+                </ul>              
+                
+            </section>
+
+        <!-- Section Store -->  
+            <section id="Store" class="section">
+                <h2 class="section__header">STORE</h2>
+                <ul class="Section__grid">
+                <!-- 1 st item -->
+                    <li class="section__item">
+                        <figure class="card card__media">
+                            <img class="card__img"
+                            src="images/bouquet3.jpg" alt="bukiet kwiatów, różne rodzaje, odcienie czerwieni"
+                            width="136" height="155"
+                            >
+                            <figcaption class="card__body">
+                                <h3 class="card__name"> 
+                                    compliments
+                                </h3>
+                                <p class="card__description">
+                                    from $15
+                                </p>
+                            </figcaption>
+
+                        </figure>
+                    </li>
+                <!-- 2-nd item -->
+                    <li class="section__item">
+                        <figure class="card card__media">
+                            <img class="card__img"
+                            src="images/bouquet1.jpg" alt="bukiet kwiatów, różne rodzaje, odcienie czerwieni"
+                            width="136" height="155"
+                            >
+                            <figcaption class="card__body">
+                                <h3 class="card__name"> 
+                                    bouquets size S
+                                </h3>
+                                <p class="card__description">
+                                    from $25
+                                </p>
+                            </figcaption>
+
+                        </figure>
+                    </li>
+                <!-- 3-rd st item -->
+                    <li class="section__item">
+                        <figure class="card card__media">
+                            <img class="card__img"
+                            src="images/bouquet4.jpg" alt="bukiet kwiatów, różne rodzaje, odcienie czerwieni"
+                            width="136" height="155"
+                            >
+                            <figcaption class="card__body">
+                                <h3 class="card__name"> 
+                                    bouquets size M
+                                </h3>
+                                <p class="card__description">
+                                    from $45
+                                </p>
+                            </figcaption>
+
+                        </figure>
+                    </li>
+                <!-- 4th item -->
+                    <li class="section__item">
+                        <figure class="card card__media">
+                            <img class="card__img"
+                            src="images/bouquet3.jpg" alt="bukiet kwiatów, różne rodzaje, odcienie czerwieni"
+                            width="136" height="155"
+                            >
+                            <figcaption class="card__body">
+                                <h3 class="card__name"> 
+                                    bouquets size L
+                                </h3>
+                                <p class="card__description">
+                                    from $60
+                                </p>
+                            </figcaption>
+
+                        </figure>
+                    </li>
+                </ul>     
+            <!-- section__footer-->
+                <div class="section__footer">
+                    <button data-modal-open class="btn btn__media modal__btn" type="button">
+                        Oreder flowers
+                    </button>
+                </div>     
+            </section>
+
+        <!-- Section Delivery --> 
+            <section id="Delivery" class="section">
+                <h2 class="section__header">DELIVERY</h2>
+                <ul class="Section__grid section__grid--list">
+                <!-- 1st list item-->  
+                    <li class="section__item">
+                        <p class="list__item">
+                            Choose your bouquet and make an order on website
+                        </p>
+                    </li>
+                <!-- 2nd list item--> 
+                    <li class="section__item">
+                        <p class="list__item">
+                            Wait for the call to clarify the details of the order. You can pay online or to the courier
+                        </p>
+                    </li>
+                <!-- 3rd list item--> 
+                    <li class="section__item">
+                        <p class="list__item">
+                            Wait for the delivery at the selected time or pick up the order from the store 
+                        </p>
+                    </li>
+                <!-- 4th list item--> 
+                    <li class="section__item">
+                        <p class="list__item">
+                            Make someone happy or enjoy yourself
+                        </p>
+                    </li>
+                </ul>
+            <!-- section__footer-->
+                <div class="section__footer section__img">
+                    <img class="img" 
+                    src="images/bouquet5.jpg" alt="bukiet kwiatów, różne rodzaje, odcienie czerwieni"
+                    width="320" height="135"                          
+                    >   
+                </div>    
+            </section>
+
+        <!-- Section Blog --> 
+            <section id="Blog" class="section">
+                <h2 class="section__title">BLOG</h2>
+                <ul class="Section__grid section__slider">
+                
+                </ul>
+
+            <!-- section Blog__footer-->
+            <div class="section__footer">
+                <p class="text">
+                    Follow to our newsletter
+                </p>
+                <button data-modal-open class="btn btn__media modal__btn" type="button">
+                    Subscribe
+                </button>
+            </div>     
+            </section>
+        </div>
+    </main>
+
+    <footer>
+
+
+    </footer>
+
+
+
+  </body>
