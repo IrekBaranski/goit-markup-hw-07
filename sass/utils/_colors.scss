@@ -28,7 +28,7 @@ $colors: (
     'main': rgb(33, 33, 33,1),
 
     'accent':rgb(33, 150, 243, 1),
-    'accent-a09': rgb(33, 150, 243, 0.9),
+    'accent-a09': rgb(33, 150, 243, 0.9), //or rgba(getColor('accent', .09)
     
     'font-dark': rgb(33, 33, 33,1),
     'font-grey': rgb(117, 117, 117),
@@ -39,6 +39,7 @@ $colors: (
 
     'bg-dark-main': rgb(47, 48, 58),
     'bg-dark-main-a08': rgba(47, 48, 58, 0.8),
+    'bg-dark-main-a04': rgba(0, 0, 0, 0.4),
     'bg-light-main': white,
     'bg-light-sec': rgb(245, 244, 250),
     'bg-light-main-a01': rgba(255, 255, 255, 0.1),
