@@ -67,12 +67,22 @@
     box-shadow: 0px 1px 3px var(--dark-bg-color-black1),
       0px 1px 1px var(--second-color-dark-grey),
       0px 2px 1px var(--svg-color-lgrey);*/
+    &__header{
+        display: block;
+        
+        font-size: 20px;
+        font-weight: 700;
+        line-height: calc(23/20)px;
+        letter-spacing: 0.03em;
+        text-align: center;
+        color: getColor('font-dark'); 
+    }
     &__label{
         font-size: 12px;
         line-height: calc(14/12) px;
         letter-spacing: 0.01em;
         text-align: left;
-        color: var(--second-color-dark-grey);
+        color: getColor('font-grey');
         margin-top: 10px;
     }
     &__item{
@@ -82,12 +92,11 @@
         width: 448px;
         height: auto;
         border-radius: 4px;
-        border: 1px solid /*getColor() */ var(--border-color-black-02);
+        border: 1px solid rgba(getColor('border-dark'), 0.2);
         padding: 11px 12px;
         margin-top: 4px;
-        border-color: var(--border-color-black-02);
-        color: var(--main-color-black);
-        fill: var(--main-color-black);
+        color: getColor('main');
+        fill: getColor('main');
     
         transition-property: border-color, fill, outline;
         transition-duration: 250ms;
@@ -96,9 +105,9 @@
         &:focus,
         &:focus-within,
         &:hover{
-            border-color: var(--brand-color-blue);
-            fill: var(--brand-color-blue);
-            outline: var(--brand-color-blue);
+            border-color: getColor('accent');
+            fill: getColor('accent');
+            outline: getColor('accent');
         }
     }
     &__icon{
@@ -134,7 +143,7 @@
     }
     &__input {
         width: 400px;
-        color: var(--main-color-black);
+        color: getColor('main');
         outline: none;
         border-style: none;
         margin-left: 12px;
@@ -169,8 +178,8 @@
         &:focus,
         &:focus-within,
         &:hover{
-            border-color: var(--brand-color-blue);
-            outline: var(--brand-color-blue);
+            border-color: getColor('accent');
+            outline: getColor('accent');
         }
     }
     &__checkbox {
