@@ -16,11 +16,9 @@
     <!-- ----- ------------------------------------------------>
     <!-- ----- Section - PAGE HEADER -----                   -->
     <!-- ----- same as menu ------------------------------------------->
-    <header class="page-header-section container">
-        <div class="l-grid l-grid__page-header">
-
-            <!-- ----- ------------------------------------------------>
-            <!-- 1st menu item - logo -->        
+    <header class="page-header">
+        <div class=" container l-grid l-grid__page-header">
+                
             <div class="logo page-header__logo">
                 <a class="logo__logotype link" href="./index.html" >
                     <span class="logo__logotype logo__logotype--brand-color">Web</span> 
@@ -30,13 +28,13 @@
     
             <!-- ----- ------------------------------------------------>
             <!-- 2nd menu item - navigation -->
-            <nav class="nav nav__text">
-                <ul class="nav__display nav__list ">
+            <nav class="page-header__nav nav__text">
+                <ul class="nav list-style">
                     <li class="nav__item">
                         <a class="link nav__link" href="./index.html">Agencja</a>
                     </li>
                     <li class="nav__item">
-                        <a class="link nav__link link--active" href="./portfolio.html">Portfolio</a>
+                        <a class="link nav__link transition link--active" href="./portfolio.html">Portfolio</a>
                     </li>
                     <li class="nav__item">
                         <a class="link nav__link" href="#/">Kontakt</a>
@@ -47,7 +45,7 @@
             <!-- ----- ------------------------------------------------>
             <!-- 3rd page-header item - contact links -->
             <div class="contact contact__text">
-                    <ul class="contact__display contact__list">
+                    <ul class="contact__display list-style">
                         <li>
                             <a class="contact__item link" href="mailto:info@devstudio.com">
                                 <svg class="contact__icon-mail" width="16" height="12">
@@ -325,21 +323,21 @@
     <!-- ----- cont. logo + address box / social media icons ----- -->
     <!-- ----- ----- --------- ----- ----- -->
 
-    <footer class="section__footer">
-        <div class="container footer__grid"> <!-- grid division: 1/2, 1/2, 1 -->
+    <footer class="footer ">
+        <div class="container l-grid l-grid__footer"> <!-- grid division: 1/2, 1/2, 1 -->
             
             <!-- 1st footer item - box cont. logo + address box -->
             <div class="footer__item">
-                <div class="logo">
+                <div class="logo footer__logo">
                     <a class="link" href="./index.html">
                         <span class="logo__logotype logo__logotype--brand-color">Web</span>
-                        <span class="logo__logotype logo__logotype--on-dark-bg">Studio</span>
+                        <span class="logo__logotype logo__logotype--light-theme">Studio</span>
                     </a>        
                 </div>
-                <address class="address__box">
+                <address class="address">
                     <p> m. Warszawa, Aleje Jerozolimskie 21 </p>
-                    <p><a class="link address__link--color" href="mailto:info@example.com">info@example.com</a></p>
-                    <p><a class="link address__link--color" href="tel:+48111111111">+48 111 111 111</a></p>
+                    <p><a class="link address--cl-grey" href="mailto:info@example.com">info@example.com</a></p>
+                    <p><a class="link address--cl-grey" href="tel:+48111111111">+48 111 111 111</a></p>
                 </address>
             </div> 
 
@@ -349,13 +347,13 @@
 
                 <h3 class="footer__label" >DOŁĄCZ DO NAS
                 </h3>
-                <ul class="footer__icons-list">
+                <ul class="footer__round-btn">
                                                     
                     <!-- social media - 1st icon -insta-->
                     <li>
-                        <a class="footer__icon-bg link " href="#instagram-link" > 
+                        <a class="link round-btn round-btn--dark-theme transition" href="#instagram-link" > 
                             
-                            <svg class="footer__icon" 
+                            <svg class="round-btn__icon" 
                             width="20" height="20">
                                 <use href="./images/icons.svg#icon-instagram"></use>
                             </svg>
@@ -365,8 +363,8 @@
 
                     <!-- social media - 2nd icon -twitter -->    
                         <li>
-                            <a class="footer__icon-bg link" href="#twitter-link" > 
-                                <svg class="footer__icon" 
+                            <a class="link round-btn round-btn--dark-theme transition" href="#twitter-link" > 
+                                <svg class="round-btn__icon" 
                                 width="20" height="20">
                                     <use href="./images/icons.svg#icon-twitter-1"></use>
                                 </svg>
@@ -375,8 +373,8 @@
                         
                     <!-- social media - 3rd icon - facebook -->
                         <li>
-                            <a class="footer__icon-bg link" href="#facebook-link" > 
-                                <svg class="footer__icon" 
+                            <a class="link round-btn round-btn--dark-theme transition" href="#facebook-link" > 
+                                <svg class="round-btn__icon" 
                                 width="20" height="20">
                                     <use href="./images/icons.svg#icon-facebook-1"></use>
                                 </svg>
@@ -385,8 +383,8 @@
 
                     <!-- social media - 4th icon - linkedIn -->  
                         <li>
-                            <a class="footer__icon-bg link" href="#footerlinkedin-link" > 
-                                <svg class=".footer__icon" 
+                            <a class="link round-btn round-btn--dark-theme transition" href="#footerlinkedin-link" > 
+                                <svg class="round-btn__icon" 
                                 width="20" height="20">
                                     <use href="./images/icons.svg#icon-linkedin-1"></use>
                                 </svg>
@@ -396,31 +394,32 @@
                 </ul>
             </div>
 
-            <form class="footer__item footer-form" name="newsletter_email" action="/singnup" method="post" autocomplete="off" target="_self" validate>
-                <label class="footer__label" for="email" >ZAPISZ SIĘ DO NEWSLETTERA
-                </label>
-                <div class="footer-form__grid">
-                    <input  
-                    class="footer-form__input" 
-                    type="email"
-                    id="email" 
-                    name="newsletter-user-email" 
-                    placeholder="E-mail, example@mail.com" 
-                    />
-                    <button class="button footer-btn" type="submit">
-                        <div class="footer-btn__grid">
-                            <span class="footer-btn__text">
-                            Zapisz się
-                            </span>
-                            <svg class="footer-btn__icon" width="24" height="24">
-                                <use href="./images/icons.svg#icon-icon-send"/>
-                            </svg>
-                        </div>
-                    </button>
-                </label>
-                        </div>                             
-                        
-                    </p>
+            <div class="footer__item">
+                <form class="footer__item footer-form" name="newsletter_email" action="/singnup" method="post" autocomplete="off" target="_self" validate>
+                    <label class="footer__label" for="email" >ZAPISZ SIĘ DO NEWSLETTERA
+                    </label>
+                    <div class="footer-form__grid">
+                        <input  
+                        class="footer-form__input transition" 
+                        type="email"
+                        id="email" 
+                        name="newsletter-user-email" 
+                        placeholder="E-mail, example@mail.com" 
+                        />
+                        <button class="btn btn__txt" type="submit">
+                            <div class="btn__grid">
+                                <span class="btn__text">
+                                Zapisz się
+                                </span>
+                                <svg class="btn__icon" width="24" height="24">
+                                    <use href="./images/icons.svg#icon-icon-send"/>
+                                </svg>
+                            </div>
+                        </button>
+                    </label>
+                            </div>                             
+                            
+                        </p>
 
                 </form>
             </div>

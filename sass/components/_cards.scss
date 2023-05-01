@@ -10,11 +10,62 @@
 
     background-color: getColor('bg-light-main');
     
+     //card parts/ __ELEMENTS
+    &__body {
+        width: auto;
+        height: auto;
+        margin: 0px;
+        padding: 30px 32px;
+    }
+        
+    &__img{display: block;}
+
+    &__name{
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 1.19;
+        letter-spacing: 0.03em;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+    &__description{
+        font-size: 16px;
+        line-height: 1.19;
+        letter-spacing: 0.03em;
+        text-align: center;
+        margin-bottom: 16px;
+
+        color: getColor('font-grey');
+    }
+
+    &__round-btn{
+        list-style-type: none;
+        display: flex;
+        justify-content: space-between;
+        gap: 10px;
+    }
+    // card mixed to specific section
     &__offer-card{max-width: 370px;}
+    &__offer-label{
+        position: absolute;
+        bottom: 0;
+        display: block;
+        width: 370px;
+        height: 70px;
+        padding: 27px 90px;
+    
+        text-align: center;
+        font-size: 14px;
+        font-weight: 700;
+        line-height: calc(16/14)px;
+        letter-spacing: 0.03em;
+        color: getColor('font-light-main');
+        background-image: linear-gradient((rgba(getColor('bg-dark-main'), 0.8)), (rgba(getColor('bg-dark-main'), 0.9)));
+    }
 
     &__team-card {
         max-width: 270px;
-        min-height: auto;
+        min-height: auto; 
         
         background: getColor('bg-light-main');
     
@@ -32,43 +83,6 @@
         box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
     }
     
-   
-
-    &__body {
-        width: auto;
-        height: auto;
-        margin: 0px;
-        padding: 30px 32px;
-    }
-        
-    &__img{
-        display: block;
-    }
-
-    &__name{
-        font-size: 16px;
-        font-weight: 500;
-        line-height: 1.19;
-        letter-spacing: 0.03em;
-        text-align: center;
-        margin-bottom: 10px;
-    }
-
-    &__description{
-        font-size: 16px;
-        line-height: 1.19;
-        letter-spacing: 0.03em;
-        text-align: center;
-        margin-bottom: 16px;
-
-        color: getColor('font-grey');
-    }
-
-    &__round-btn{
-        list-style-type: none;
-        display: flex;
-        justify-content: space-between;
-        gap: 10px;
-    }
+  
 
 }
