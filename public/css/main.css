@@ -64,7 +64,56 @@ p {
 .link:hover, .link:active, .link:focus {
   color: rgb(33, 150, 243);
 }
+.link--active::after {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  content: "";
+  width: 58px;
+  min-height: 4px;
+  border-radius: 10px;
+  background-color: rgb(33, 150, 243);
+  margin-top: 28px;
+  position: absolute;
+  -webkit-animation-name: updownLine;
+          animation-name: updownLine;
+  -webkit-animation-duration: 5s;
+          animation-duration: 5s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-timing-function: ease-out;
+          animation-timing-function: ease-out;
+}
 
+@-webkit-keyframes updownLine {
+  0% {
+    margin-top: 28px;
+    width: 58px;
+  }
+  50% {
+    margin-top: 2px;
+    width: 62px;
+  }
+  100% {
+    margin-top: 28px;
+    width: 58px;
+  }
+}
+
+@keyframes updownLine {
+  0% {
+    margin-top: 28px;
+    width: 58px;
+  }
+  50% {
+    margin-top: 2px;
+    width: 62px;
+  }
+  100% {
+    margin-top: 28px;
+    width: 58px;
+  }
+}
 .transition {
   -webkit-transition-duration: 250ms;
           transition-duration: 250ms;
@@ -149,6 +198,11 @@ p {
 }
 .l-grid__page-header {
   height: 80px;
+}
+.l-grid__btns {
+  gap: 0px 8px;
+  height: auto;
+  margin-bottom: 50px;
 }
 .l-grid--wrap {
   -ms-flex-wrap: wrap;
@@ -330,6 +384,32 @@ p {
 .btn__icon {
   display: inline-block;
   fill: white;
+}
+.btn__portfolio {
+  height: 38px;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  padding: 6px 22px;
+  text-align: center;
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.62;
+  letter-spacing: 0.03em;
+  color: rgb(33, 33, 33);
+  background-color: rgb(245, 244, 250);
+  -webkit-transition-property: background-color, color, -webkit-box-shadow;
+  transition-property: background-color, color, -webkit-box-shadow;
+  transition-property: background-color, color, box-shadow;
+  transition-property: background-color, color, box-shadow, -webkit-box-shadow;
+}
+.btn__portfolio:hover, .btn__portfolio:focus {
+  background-color: rgb(33, 150, 243);
+  color: var(--main-color-on-dark-bg-white);
+  /* shadow-middle */
+  -webkit-box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+          box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
 .round-btn {
@@ -911,9 +991,107 @@ p {
   transition-property: box-shadow;
   transition-property: box-shadow, -webkit-box-shadow;
 }
+.card___portfolio:hover, .card___portfolio:focus, .card___portfolio:active {
+  -webkit-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+          box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+}
+.card--theme-light {
+  background-color: red;
+}
 .card:hover, .card:focus, .card:active {
   -webkit-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
           box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+}
+
+.portfolio-card {
+  position: relative;
+  display: inline-block;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  max-width: -webkit-max-content;
+  max-width: -moz-max-content;
+  max-width: max-content;
+  min-height: auto;
+  max-height: -webkit-max-content;
+  max-height: -moz-max-content;
+  max-height: max-content;
+  background-color: white;
+  -webkit-transition-property: -webkit-box-shadow;
+  transition-property: -webkit-box-shadow;
+  transition-property: box-shadow;
+  transition-property: box-shadow, -webkit-box-shadow;
+}
+.portfolio-card:hover, .portfolio-card:focus, .portfolio-card:active {
+  -webkit-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+          box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+}
+.portfolio-card__header {
+  position: relative;
+  display: block;
+  width: 370px;
+  height: 294px;
+  overflow: hidden;
+}
+.portfolio-card__description {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.5555555556;
+  letter-spacing: 0.03em;
+  text-align: left;
+  padding: 49px 45px 49px 24px;
+  margin: 0;
+  color: white;
+}
+.portfolio-card__body {
+  max-width: 370px;
+  padding: 15px 24px 20px;
+  border-left: 1px solid rgb(236, 236, 236);
+  border-right: 1px solid rgb(236, 236, 236);
+  border-bottom: 1px solid rgb(236, 236, 236);
+}
+.portfolio-card__title {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 2;
+  letter-spacing: 0.06em;
+  text-align: left;
+  color: rgb(33, 33, 33);
+  margin-bottom: 4px;
+}
+.portfolio-card__label {
+  font-size: 16px;
+  line-height: 1.9;
+  letter-spacing: 0.03em;
+  text-align: left;
+  color: rgb(117, 117, 117);
+}
+.portfolio-card:hover .overlay {
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(33, 150, 243);
+  -webkit-transform: translateY(100%);
+          transform: translateY(100%);
+  -webkit-transition-property: -webkit-transform;
+  transition-property: -webkit-transform;
+  transition-property: transform;
+  transition-property: transform, -webkit-transform;
+  -webkit-transition-duration: 350ms;
+          transition-duration: 350ms;
+  -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+          transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .footer {

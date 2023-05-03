@@ -69,7 +69,13 @@
     gap: 30px 30px;
     list-style-type: none;
 
-    &__page-header{height: 80px;}
+    &__page-header {height: 80px;}
+
+    &__btns{
+        gap: 0px 8px;
+        height: auto;
+        margin-bottom: 50px;
+    }
 
     &--wrap {
         flex-wrap: wrap; 

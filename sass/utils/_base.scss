@@ -32,6 +32,42 @@ p {margin: 0px;}
     &:active,
     &:focus
     {color: getColor('accent');}
+
+    &--active::after {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        content: "";
+        width: 58px;
+        min-height: 4px;
+        border-radius: 10px;
+        background-color: getColor('accent');
+        margin-top: 28px;
+        position: absolute;
+    
+        animation-name: updownLine;
+        animation-duration: 5s;
+        animation-iteration-count: infinite;
+        animation-timing-function: ease-out;
+    
+      }
+}
+
+@keyframes updownLine {
+    0% {
+        margin-top: 28px;
+        width: 58px
+
+        }
+    50% {
+        margin-top: 2px;
+        width: 62px
+        
+        }
+    100% {
+        margin-top: 28px;
+        width: 58px
+    }
 }
 
 .transition     {
