@@ -34,7 +34,7 @@
         fill: getColor('font-light-main');
     }
 
-    &__portfolio{
+    &-portfolio{
         height: 38px;
         width:max-content;
         padding: 6px 22px;
@@ -48,15 +48,14 @@
 
         color: getColor('font-dark');
         background-color: getColor('bg-light-sec');
+        box-shadow: none;
         
-        transition-property: background-color, color, box-shadow;
+        transition-property: background-color, color;
 
         &:hover,
         &:focus {
             background-color: getColor('accent');
-            color: var(--main-color-on-dark-bg-white);
-
-        /* shadow-middle */
+            color: getColor('font-light-main');
             box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
         }
     }
