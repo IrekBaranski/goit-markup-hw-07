@@ -31,7 +31,12 @@ p {margin: 0px;}
     &:hover,
     &:active,
     &:focus
-    {color: getColor('accent');}
+    {color: getColor('accent');
+    fill: getColor('accent');
+    }
+    &hover .icon{
+        fill: getColor('accent');
+    }
 
     &--active::after {
         display: block;
@@ -50,7 +55,8 @@ p {margin: 0px;}
         animation-iteration-count: infinite;
         animation-timing-function: ease-out;
     
-      }
+    }
+
 }
 
 @keyframes updownLine {
@@ -78,4 +84,5 @@ p {margin: 0px;}
 .icon {
     display: inline-block;    
     fill: inherit;
+    
 }
